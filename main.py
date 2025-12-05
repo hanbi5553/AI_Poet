@@ -3,8 +3,8 @@ from openai import OpenAI
 import os
 from dotenv import load_dotenv
 
-# .env 불러오기
-load_dotenv()
+
+#load_dotenv()
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
@@ -30,4 +30,5 @@ if st.button("시 생성"):
             poem = response.output_text
             st.success("시가 완성되었습니다!")
             st.write(poem)
+
 
